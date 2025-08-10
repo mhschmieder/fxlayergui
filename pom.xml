@@ -10,7 +10,7 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>FxLayerGui</name>
+	<name>fxlayergui</name>
 	<url>https://github.com/mhschmieder/fxlayergui</url>
 	<description>JavaFX based GUI support for basic layer management.</description>
 
