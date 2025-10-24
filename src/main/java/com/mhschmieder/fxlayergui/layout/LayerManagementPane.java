@@ -31,8 +31,8 @@
 package com.mhschmieder.fxlayergui.layout;
 
 import com.mhschmieder.fxcontrols.control.ControlUtilities;
-import com.mhschmieder.fxcontrols.layout.LayoutFactory;
 import com.mhschmieder.fxcontrols.stage.XStage;
+import com.mhschmieder.fxcontrols.util.RegionUtilities;
 import com.mhschmieder.fxlayercontrols.control.LayerPropertiesTable;
 import com.mhschmieder.fxlayergraphics.LayerUtilities;
 import com.mhschmieder.fxlayergraphics.model.LayerProperties;
@@ -191,7 +191,7 @@ public final class LayerManagementPane extends BorderPane {
 
     public void setForegroundFromBackground( final Color backColor ) {
         // Set the new Background first, so it sets context for CSS derivations.
-        final Background background = LayoutFactory.makeRegionBackground( backColor );
+        final Background background = RegionUtilities.makeRegionBackground( backColor );
         setBackground( background );
 
         // Forward this method to the Layer Properties Table.
