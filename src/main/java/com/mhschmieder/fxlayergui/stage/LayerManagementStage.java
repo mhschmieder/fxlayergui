@@ -30,8 +30,8 @@
  */
 package com.mhschmieder.fxlayergui.stage;
 
-import com.mhschmieder.fxcontrols.dialog.DialogUtilities;
-import com.mhschmieder.fxcontrols.stage.XStage;
+import com.mhschmieder.fxgui.dialog.DialogUtilities;
+import com.mhschmieder.fxgui.stage.XStage;
 import com.mhschmieder.fxlayercontrols.action.LayerManagementActions;
 import com.mhschmieder.fxlayercontrols.control.LayerManagementMenuFactory;
 import com.mhschmieder.fxlayercontrols.control.LayerManagementToolBar;
@@ -239,7 +239,8 @@ public final class LayerManagementStage extends XStage {
     @Override
     protected Node loadContent() {
         // Instantiate and return the custom Content Node.
-        _layerManagementPane = new LayerManagementPane( this, clientProperties );
+        _layerManagementPane = new LayerManagementPane(
+                this, clientProperties );
         return _layerManagementPane;
     }
 

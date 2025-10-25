@@ -31,8 +31,8 @@
 package com.mhschmieder.fxlayergui.layout;
 
 import com.mhschmieder.fxcontrols.control.ControlUtilities;
-import com.mhschmieder.fxcontrols.stage.XStage;
 import com.mhschmieder.fxcontrols.util.RegionUtilities;
+import com.mhschmieder.fxgui.stage.XStage;
 import com.mhschmieder.fxlayercontrols.control.LayerPropertiesTable;
 import com.mhschmieder.fxlayergraphics.LayerUtilities;
 import com.mhschmieder.fxlayergraphics.model.LayerProperties;
