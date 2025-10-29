@@ -37,7 +37,7 @@ import com.mhschmieder.fxlayercontrols.control.LayerManagementMenuFactory;
 import com.mhschmieder.fxlayercontrols.control.LayerManagementToolBar;
 import com.mhschmieder.fxlayercontrols.control.LayerPropertiesTable;
 import com.mhschmieder.fxlayercontrols.util.LayerManagementMessageFactory;
-import com.mhschmieder.fxlayergraphics.LayerUtilities;
+import com.mhschmieder.fxlayergraphics.LayerPropertiesManager;
 import com.mhschmieder.fxlayergraphics.model.LayerProperties;
 import com.mhschmieder.fxlayergui.layout.LayerManagementPane;
 import com.mhschmieder.jcommons.branding.ProductBranding;
@@ -184,8 +184,8 @@ public final class LayerManagementStage extends XStage {
         // to sync the table's displayed rows.
         // NOTE: Deferred instead, in hopes that it's valid after dirty flag
         // callback has finished executing.
-        if ( !LayerUtilities.hasActiveLayer( _layerCollection ) ) {
-            LayerUtilities.setDefaultLayerActive( _layerCollection );
+        if ( !LayerPropertiesManager.hasActiveLayer( _layerCollection ) ) {
+            LayerPropertiesManager.setDefaultLayerActive( _layerCollection );
             _layerManagementPane.setSelectedRow( LayerPropertiesTable.ROW_DEFAULT_LAYER );
         }
         else {
@@ -204,8 +204,9 @@ public final class LayerManagementStage extends XStage {
     // thus we do not want to disambiguate names as with addLayer().
     public LayerProperties importLayer( final LayerProperties layerCandidate ) {
         // Add the Layer candidate to the collection if not already present.
-        final LayerProperties layerAdjusted = LayerUtilities.importLayer( _layerCollection,
-                                                                          layerCandidate );
+        final LayerProperties layerAdjusted
+                = LayerPropertiesManager.importLayer(
+                        _layerCollection, layerCandidate );
 
         // Update the contextual Layer Management settings.
         updateContextualSettings();
@@ -232,7 +233,7 @@ public final class LayerManagementStage extends XStage {
     // Load the relevant actions for this Stage.
     @Override
     protected void loadActions() {
-        // Make all of the actions.
+        // Make all the actions.
         _actions = new LayerManagementActions( clientProperties );
     }
 

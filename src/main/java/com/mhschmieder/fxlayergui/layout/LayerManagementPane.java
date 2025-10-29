@@ -34,7 +34,7 @@ import com.mhschmieder.fxcontrols.control.ControlUtilities;
 import com.mhschmieder.fxcontrols.util.RegionUtilities;
 import com.mhschmieder.fxgui.stage.XStage;
 import com.mhschmieder.fxlayercontrols.control.LayerPropertiesTable;
-import com.mhschmieder.fxlayergraphics.LayerUtilities;
+import com.mhschmieder.fxlayergraphics.LayerPropertiesManager;
 import com.mhschmieder.fxlayergraphics.model.LayerProperties;
 import com.mhschmieder.jcommons.util.ClientProperties;
 import javafx.beans.InvalidationListener;
@@ -133,7 +133,7 @@ public final class LayerManagementPane extends BorderPane {
     public String getNewLayerNameDefault() {
         // Forward this method to the Loudspeaker Properties Table.
         // return _layerPropertiesTable.getNewLayerNameDefault();
-        return LayerUtilities.LAYER_NAME_DEFAULT + FastMath.random();
+        return LayerPropertiesManager.LAYER_NAME_DEFAULT + FastMath.random();
     }
 
     // TODO: Determine the need for this method as compared to similar
@@ -144,7 +144,7 @@ public final class LayerManagementPane extends BorderPane {
         // Forward this method to the Layer Properties Table.
         // return _layerPropertiesTable.getUniqueLayerName( layerNameCandidate
         // );
-        return LayerUtilities.LAYER_NAME_DEFAULT + FastMath.random();
+        return LayerPropertiesManager.LAYER_NAME_DEFAULT + FastMath.random();
     }
 
     private void initPane( final ClientProperties pClientProperties ) {
