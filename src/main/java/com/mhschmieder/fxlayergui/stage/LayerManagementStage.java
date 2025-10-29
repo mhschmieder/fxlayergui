@@ -36,9 +36,9 @@ import com.mhschmieder.fxlayercontrols.action.LayerManagementActions;
 import com.mhschmieder.fxlayercontrols.control.LayerManagementMenuFactory;
 import com.mhschmieder.fxlayercontrols.control.LayerManagementToolBar;
 import com.mhschmieder.fxlayercontrols.control.LayerPropertiesTable;
+import com.mhschmieder.fxlayercontrols.model.LayerProperties;
 import com.mhschmieder.fxlayercontrols.util.LayerManagementMessageFactory;
-import com.mhschmieder.fxlayergraphics.LayerPropertiesManager;
-import com.mhschmieder.fxlayergraphics.model.LayerProperties;
+import com.mhschmieder.fxlayercontrols.util.LayerPropertiesManager;
 import com.mhschmieder.fxlayergui.layout.LayerManagementPane;
 import com.mhschmieder.jcommons.branding.ProductBranding;
 import com.mhschmieder.jcommons.util.ClientProperties;
@@ -69,7 +69,7 @@ public final class LayerManagementStage extends XStage {
     public LayerManagementToolBar             _toolBar;
 
     // Cache the Layer Collection reference.
-    private ObservableList< LayerProperties > _layerCollection;
+    private ObservableList<LayerProperties> _layerCollection;
 
     // Declare the main content pane.
     protected LayerManagementPane             _layerManagementPane;

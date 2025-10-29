@@ -34,8 +34,8 @@ import com.mhschmieder.fxcontrols.control.ControlUtilities;
 import com.mhschmieder.fxcontrols.util.RegionUtilities;
 import com.mhschmieder.fxgui.stage.XStage;
 import com.mhschmieder.fxlayercontrols.control.LayerPropertiesTable;
-import com.mhschmieder.fxlayergraphics.LayerPropertiesManager;
-import com.mhschmieder.fxlayergraphics.model.LayerProperties;
+import com.mhschmieder.fxlayercontrols.model.LayerProperties;
+import com.mhschmieder.fxlayercontrols.util.LayerPropertiesManager;
 import com.mhschmieder.jcommons.util.ClientProperties;
 import javafx.beans.InvalidationListener;
 import javafx.collections.ObservableList;
@@ -198,7 +198,7 @@ public final class LayerManagementPane extends BorderPane {
         _layerPropertiesTable.setForegroundFromBackground( backColor );
     }
 
-    public void setLayerCollection( final ObservableList< LayerProperties > layerCollection ) {
+    public void setLayerCollection( final ObservableList<LayerProperties> layerCollection ) {
         // Forward this method to the Layer Properties Table.
         _layerPropertiesTable.setLayerCollection( layerCollection );
     }
