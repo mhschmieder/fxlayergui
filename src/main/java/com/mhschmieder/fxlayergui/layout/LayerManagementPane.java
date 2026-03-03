@@ -126,19 +126,21 @@ public final class LayerManagementPane extends BorderPane {
         return referenceIndex;
     }
 
-    // TODO: Determine the need for this method as compared to similar
-    // methods for graphical objects, and restore the forwarding while
-    // implementing the method on the table class itself.
+    // TODO: Determine the need for this method as compared to similar methods
+    //  for graphical objects, and restore the forwarding while implementing the
+    //  method on the table class itself.
+    // TODO: Switch from Apache Math to Apache RNG for the Random Generator.
     @SuppressWarnings("static-method")
     public String getNewLayerNameDefault() {
-        // Forward this method to the Loudspeaker Properties Table.
+        // Forward this method to the Layer Properties Table.
         // return _layerPropertiesTable.getNewLayerNameDefault();
         return LayerPropertiesManager.LAYER_NAME_DEFAULT + FastMath.random();
     }
 
-    // TODO: Determine the need for this method as compared to similar
-    // methods for graphical objects, and restore the forwarding while
-    // implementing the method on the table class itself.
+    // TODO: Determine the need for this method as compared to similar methods
+    //  for graphical objects, and restore the forwarding while implementing the
+    //  method on the table class itself.
+    // TODO: Switch from Apache Math to Apache RNG for the Random Generator.
     @SuppressWarnings("static-method")
     public String getUniqueLayerName( final String layerNameCandidate ) {
         // Forward this method to the Layer Properties Table.
